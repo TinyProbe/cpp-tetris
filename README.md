@@ -1,2 +1,2 @@
 # cpp-tetris
-A tetris using c++.
+Tetris created using C++.
