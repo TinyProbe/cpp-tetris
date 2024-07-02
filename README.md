@@ -6,7 +6,7 @@ Tetris created using C++.
 
 ### Change compile flag that "include path".
 ```Makefile
-INCPATH=[Your clone directory root]
+INCPATH=-I [Your clone directory root]
 ```
 
 ### And you can change optimization flag as you wish.
