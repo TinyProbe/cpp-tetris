@@ -1,4 +1,7 @@
 # cpp-tetris
+
+![Image](./res/git/screenshot1.png)
+
 Tetris created using C++.
 
 ### Change compile flag that "include path".
