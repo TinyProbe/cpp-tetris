@@ -10,11 +10,14 @@ class Block;
 
 class Holder : public SelfObject {
  public:
-  Holder(int x, int y, int hei, int wid);
+  Holder(int x, int y, int hei, int wid, GameOption *go);
   ~Holder();
 
-  void link_game_option(GameOption *go);
+  Block *swap_block(Block *block);
+  bool is_blank() const;
+  void set_blank(bool is);
 
+  virtual void render() override;
   virtual void rebuild() override;
 
  private:

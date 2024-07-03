@@ -54,6 +54,9 @@ enum class Color : int {
   brown,
   black,
   white,
+  recycle,
+  up,
+  down,
 };
 
 struct GameOption {

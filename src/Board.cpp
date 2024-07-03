@@ -5,7 +5,8 @@
 
 namespace ttrs {
 
-Board::Board(int x, int y, int hei, int wid) : SelfObject() {
+Board::Board(int x, int y, int hei, int wid, GameOption *go)
+    : SelfObject() {
   x_ = x;
   y_ = y;
   texture_.resize(hei, std::vector<Color>(wid, Color::empty));
@@ -16,17 +17,13 @@ Board::Board(int x, int y, int hei, int wid) : SelfObject() {
     texture_[i].front() = Color::white;
     texture_[i].back() = Color::white;
   }
-  game_option_ = nullptr;
+  game_option_ = go;
   queue_ = nullptr;
   holder_ = nullptr;
   block_ = nullptr;
 }
 Board::~Board() {
   if (block_) { delete block_; }
-}
-
-void Board::link_game_option(GameOption *go) {
-  game_option_ = go;
 }
 
 void Board::link_queue(Queue *queue) {
@@ -51,7 +48,9 @@ void Board::next_block() {
 }
 
 bool Board::rotate() {
+
   // TODO: add coordinates correction function.
+
   block_->rotate(1);
   if (!check_colision(*block_)) {
     block_->rotate((int)g_kBlock_rotate_num - 1);
@@ -94,11 +93,18 @@ bool Board::drop_down(Result &result) {
   }
   block_->set_y(block_->get_y() - 1);
   write_to(texture_, *block_);
-  next_block();
   cleaning();
   if (!is_line_empty(texture_[0]) || !is_line_empty(texture_[1])) {
     result = Result::destruct;
   }
+  next_block();
+  holder_->set_blank(false);
+  return true;
+}
+
+bool Board::recycle() {
+  if (holder_->is_blank()) { return false; }
+  block_ = holder_->swap_block(block_);
   return true;
 }
 
@@ -110,11 +116,12 @@ void Board::update(Result &result, std::size_t &change) {
     if (!check_colision(*block_)) {
       block_->set_y(block_->get_y() - 1);
       write_to(texture_, *block_);
-      next_block();
       cleaning();
       if (!is_line_empty(texture_[0]) || !is_line_empty(texture_[1])) {
         result = Result::destruct;
       }
+      next_block();
+      holder_->set_blank(false);
     }
   }
 }

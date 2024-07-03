@@ -12,10 +12,9 @@ class Block;
 
 class Board : public SelfObject {
  public:
-  Board(int x, int y, int hei, int wid);
+  Board(int x, int y, int hei, int wid, GameOption *go);
   ~Board();
 
-  void link_game_option(GameOption *go);
   void link_queue(Queue *queue);
   void link_holder(Holder *holder);
   void next_block();
@@ -25,6 +24,7 @@ class Board : public SelfObject {
   bool move_right();
   bool move_down();
   bool drop_down(Result &result);
+  bool recycle();
 
   virtual void update(Result &result, std::size_t &change) override;
   virtual void rebuild() override;

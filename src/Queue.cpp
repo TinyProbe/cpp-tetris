@@ -3,7 +3,8 @@
 
 namespace ttrs {
 
-Queue::Queue(int x, int y, std::size_t limit) : SelfObject() {
+Queue::Queue(int x, int y, std::size_t limit, GameOption *go)
+    : SelfObject() {
   x_ = x;
   y_ = y;
   limit_ = limit;
@@ -18,17 +19,13 @@ Queue::Queue(int x, int y, std::size_t limit) : SelfObject() {
     texture_[i].front() = Color::white;
     texture_[i].back() = Color::white;
   }
-  game_option_ = nullptr;
+  game_option_ = go;
 }
 Queue::~Queue() {
   while (queue_.size() > 0) {
     delete queue_.front();
     queue_.pop_front();
   }
-}
-
-void Queue::link_game_option(GameOption *go) {
-  game_option_ = go;
 }
 
 void Queue::update(Result &result, std::size_t &change) {
@@ -41,10 +38,8 @@ void Queue::update(Result &result, std::size_t &change) {
     } while (queue_.size() > 0 && queue_.back()->get_block_kind() == random_block);
     int x = x_ + 2;
     int y = y_ + 1 + (4 * queue_.size());
-    x += 4 - g_kTextures[(int)random_block][0].back().size();
-    if (random_block != BlockKind::brown_I) {
-      y += 1;
-    }
+    x += 4 - g_kTextures[(int)random_block][0][0].size();
+    if (random_block != BlockKind::brown_I) { y += 1; }
     queue_.push_back(new Block(x, y, random_block, false));
     ++change;
   }

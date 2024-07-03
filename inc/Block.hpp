@@ -19,16 +19,17 @@ class Block : public SelfObject {
   BlockKind get_block_kind() const;
   Texture const &get_texture() const;
   bool is_blank() const;
-  void set_blank(bool blank);
+  void set_blank(bool is);
   void rotate(std::size_t time);
+  void set_rotate(std::size_t time);
   void time_reset();
 
  private:
+  GameOption *game_option_;
   BlockKind block_kind_;
   bool is_blank_;
   int rotate_;
   Time time_;
-  GameOption *game_option_;
 
 };
 

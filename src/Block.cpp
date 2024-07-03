@@ -8,11 +8,11 @@ Block::Block(int x, int y, BlockKind block_kind, bool is_blank)
     : SelfObject() {
   x_ = x;
   y_ = y;
+  game_option_ = nullptr;
   block_kind_ = block_kind;
   is_blank_ = is_blank;
   rotate_ = 0;
   time_ = Clock::now();
-  game_option_ = nullptr;
 }
 Block::~Block() {}
 
@@ -61,13 +61,16 @@ bool Block::is_blank() const {
   return is_blank_;
 }
 
-void Block::set_blank(bool blank) {
-  is_blank_ = blank;
+void Block::set_blank(bool is) {
+  is_blank_ = is;
 }
 
 void Block::rotate(std::size_t time) {
-  rotate_ += time;
-  rotate_ %= g_kBlock_rotate_num;
+  rotate_ = (rotate_ + time) % g_kBlock_rotate_num;
+}
+
+void Block::set_rotate(std::size_t time) {
+  rotate_ = time % g_kBlock_rotate_num;
 }
 
 void Block::time_reset() {

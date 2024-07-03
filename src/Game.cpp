@@ -8,23 +8,21 @@
 
 namespace ttrs {
 
-Game::Game(GameOption *go)
-    : Scene(), game_option_(go) {
-  Holder *holder = new Holder(g_kGame_holder_x, g_kGame_holder_y,
-                              g_kGame_holder_hei, g_kGame_holder_wid);
-  Queue *queue = new Queue(g_kGame_queue_x, g_kGame_queue_y, g_kQueue_limit);
-  Board *board = new Board(g_kGame_board_x, g_kGame_board_y,
-                           g_kGame_board_hei, g_kGame_board_wid);
-
-  holder->link_game_option(go);
-  queue->link_game_option(go);
-  board->link_game_option(go);
-  board->link_holder(holder);
-  board->link_queue(queue);
-
-  components_.push_back(holder);
-  components_.push_back(queue);
-  components_.push_back(board);
+Game::Game(GameOption *go) : Scene(), game_option_(go) {
+  components_.push_back(new Holder(g_kGame_holder_x,
+                                   g_kGame_holder_y,
+                                   g_kGame_holder_hei,
+                                   g_kGame_holder_wid, go));
+  components_.push_back(new Queue(g_kGame_queue_x,
+                                  g_kGame_queue_y,
+                                  g_kQueue_limit, go));
+  components_.push_back(new Board(g_kGame_board_x,
+                                  g_kGame_board_y,
+                                  g_kGame_board_hei,
+                                  g_kGame_board_wid, go));
+  Board *board = (Board *)components_.back();
+  board->link_holder((Holder *)components_[0]);
+  board->link_queue((Queue *)components_[1]);
 }
 Game::~Game() {}
 
@@ -48,6 +46,8 @@ void Game::process(Result &result, std::size_t &change) {
     } break;
    case 13: case 32: // enter, space
     drop(result, change); break;
+   case 9: // tab
+    recycle(change); break;
    case 27: // esc
     result = Result::construct_pause;
     break;
@@ -82,6 +82,11 @@ void Game::down(std::size_t &change) {
 void Game::drop(Result &result, std::size_t &change) {
   Board *board = (Board *)components_.back();
   if (board->drop_down(result)) { ++change; }
+}
+
+void Game::recycle(std::size_t &change) {
+  Board *board = (Board *)components_.back();
+  if (board->recycle()) { ++change; }
 }
 
 } // namespace ttrs

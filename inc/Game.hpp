@@ -20,6 +20,7 @@ class Game : public Scene {
   void right(std::size_t &change);
   void down(std::size_t &change);
   void drop(Result &result, std::size_t &change);
+  void recycle(std::size_t &change);
 
   GameOption *game_option_;
 

@@ -69,8 +69,7 @@ std::string const g_kSelector_setting_right = "+";
 std::vector<std::string> const g_kColors = {
   "  ", "🟥", "🟧", "🟨",
   "🟩", "🟦", "🟪", "🟫",
-  "🔳", "🔲", "🔜", "🔄",
-  "🔼", "🔽", "🏹",
+  "🔳", "🔲", "🔄", "🔼", "🔽",
 };
 std::vector<std::vector<Texture>> const g_kTextures = {
   { // red_Z
