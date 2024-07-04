@@ -58,7 +58,7 @@ std::size_t const g_kOption_width = 20;
 std::size_t const g_kQueue_limit = 5;
 std::size_t const g_kBlock_rotate_num = 4;
 
-std::size_t const g_kOption_game_speed_default = 10;
+std::size_t const g_kOption_game_speed_default = 5;
 std::size_t const g_kOption_game_speed_min = 1;
 std::size_t const g_kOption_game_speed_max = 20;
 
@@ -67,7 +67,6 @@ std::string const g_kSelector_button_right = ">";
 std::string const g_kSelector_setting_left = "-";
 std::string const g_kSelector_setting_right = "+";
 std::vector<std::vector<int>> const g_kCoordinates_corrections = {
-  { 0,       0 },
   { 0,      -1 },
   { 1 * 2,   0 },
   { 0,       1 },
