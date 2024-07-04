@@ -66,6 +66,21 @@ std::string const g_kSelector_button_left = "<";
 std::string const g_kSelector_button_right = ">";
 std::string const g_kSelector_setting_left = "-";
 std::string const g_kSelector_setting_right = "+";
+std::vector<std::vector<int>> const g_kCoordinates_corrections = {
+  { 0,       0 },
+  { 0,      -1 },
+  { 1 * 2,   0 },
+  { 0,       1 },
+  { -1 * 2,  0 },
+  { 1 * 2,  -1 },
+  { 1 * 2,   1 },
+  { -1 * 2,  1 },
+  { -1 * 2, -1 },
+  { 0,      -2 },
+  { 2 * 2,   0 },
+  { 0,       2 },
+  { -2 * 2,  0 },
+};
 std::vector<std::string> const g_kColors = {
   "  ", "🟥", "🟧", "🟨",
   "🟩", "🟦", "🟪", "🟫",

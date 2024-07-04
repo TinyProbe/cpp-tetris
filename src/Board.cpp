@@ -48,15 +48,18 @@ void Board::next_block() {
 }
 
 bool Board::rotate() {
-
-  // TODO: add coordinates correction function.
-
+  int x = block_->get_x();
+  int y = block_->get_y();
   block_->rotate(1);
-  if (!check_colision(*block_)) {
-    block_->rotate((int)g_kBlock_rotate_num - 1);
-    return false;
+  for (int i = 0; i < (int)g_kCoordinates_corrections.size(); ++i) {
+    block_->set_x(x + g_kCoordinates_corrections[i][0]);
+    block_->set_y(y + g_kCoordinates_corrections[i][1]);
+    if (check_colision(*block_)) { return true; }
   }
-  return true;
+  block_->rotate((int)g_kBlock_rotate_num - 1);
+  block_->set_x(x);
+  block_->set_y(y);
+  return false;
 }
 
 bool Board::move_left() {

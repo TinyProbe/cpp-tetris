@@ -115,6 +115,7 @@ extern std::string const g_kSelector_button_left;
 extern std::string const g_kSelector_button_right;
 extern std::string const g_kSelector_setting_left;
 extern std::string const g_kSelector_setting_right;
+extern std::vector<std::vector<int>> const g_kCoordinates_corrections;
 extern std::vector<std::string> const g_kColors;
 extern std::vector<std::vector<Texture>> const g_kTextures;
 
