@@ -1,7 +1,7 @@
-#include <inc/Menu.hpp>
-#include <inc/Button.hpp>
-#include <inc/Selector.hpp>
-#include <inc/Image.hpp>
+#include <Menu.hpp>
+#include <Button.hpp>
+#include <Selector.hpp>
+#include <Image.hpp>
 
 #include <conio.h>
 

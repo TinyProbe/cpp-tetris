@@ -1,8 +1,8 @@
-#include <inc/Option.hpp>
-#include <inc/Button.hpp>
-#include <inc/Selector.hpp>
-#include <inc/Setting.hpp>
-#include <inc/Image.hpp>
+#include <Option.hpp>
+#include <Button.hpp>
+#include <Selector.hpp>
+#include <Setting.hpp>
+#include <Image.hpp>
 
 #include <conio.h>
 

@@ -1,4 +1,4 @@
-#include <inc/Screen.hpp>
+#include <Screen.hpp>
 
 #include <string.h>
 #include <iostream>

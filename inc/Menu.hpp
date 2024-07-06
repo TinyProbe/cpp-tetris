@@ -1,8 +1,8 @@
 #ifndef TETRIS_MENU_HPP
 #define TETRIS_MENU_HPP
 
-#include <inc/Scene.hpp>
-#include <inc/tetris.h>
+#include <Scene.hpp>
+#include <tetris.h>
 
 namespace ttrs {
 

@@ -1,5 +1,5 @@
-#include <inc/Button.hpp>
-#include <inc/Selector.hpp>
+#include <Button.hpp>
+#include <Selector.hpp>
 
 namespace ttrs {
 

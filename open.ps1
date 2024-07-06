@@ -2,7 +2,7 @@ $inc_files = ls ./inc/*.hpp
 $src_files = ls ./src/*.cpp
 $files = ""
 
-for ($i = 0; $i -lt $inc_files.length; ++$i) {
+for ($i = 0; $i -lt $inc_files.count; ++$i) {
   $files = $files + $inc_files[$i] + " "
   $files = $files + $src_files[$i] + " "
 }

@@ -1,5 +1,5 @@
-#include <inc/Holder.hpp>
-#include <inc/Block.hpp>
+#include <Holder.hpp>
+#include <Block.hpp>
 
 #include <algorithm>
 

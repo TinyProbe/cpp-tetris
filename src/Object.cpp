@@ -1,5 +1,5 @@
-#include <inc/Object.hpp>
-#include <inc/Screen.hpp>
+#include <Object.hpp>
+#include <Screen.hpp>
 
 namespace ttrs {
 

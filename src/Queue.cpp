@@ -1,5 +1,5 @@
-#include <inc/Queue.hpp>
-#include <inc/Block.hpp>
+#include <Queue.hpp>
+#include <Block.hpp>
 
 namespace ttrs {
 

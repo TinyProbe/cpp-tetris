@@ -1,7 +1,7 @@
 #ifndef TETRIS_OBJECT_HPP
 #define TETRIS_OBJECT_HPP
 
-#include <inc/tetris.h>
+#include <tetris.h>
 
 namespace ttrs {
 

@@ -1,7 +1,7 @@
 #ifndef TETRIS_SCENE_HPP
 #define TETRIS_SCENE_HPP
 
-#include <inc/tetris.h>
+#include <tetris.h>
 
 namespace ttrs {
 

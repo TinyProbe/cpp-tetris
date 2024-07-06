@@ -1,10 +1,10 @@
 #ifndef TETRIS_SELECTOR_HPP
 #define TETRIS_SELECTOR_HPP
 
-#include <inc/Object.hpp>
-#include <inc/Button.hpp>
-#include <inc/Setting.hpp>
-#include <inc/tetris.h>
+#include <Object.hpp>
+#include <Button.hpp>
+#include <Setting.hpp>
+#include <tetris.h>
 
 namespace ttrs {
 

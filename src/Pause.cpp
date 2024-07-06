@@ -1,7 +1,7 @@
-#include <inc/Pause.hpp>
-#include <inc/Button.hpp>
-#include <inc/Selector.hpp>
-#include <inc/Image.hpp>
+#include <Pause.hpp>
+#include <Button.hpp>
+#include <Selector.hpp>
+#include <Image.hpp>
 
 #include <conio.h>
 

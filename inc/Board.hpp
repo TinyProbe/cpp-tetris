@@ -1,8 +1,8 @@
 #ifndef TETRIS_BOARD_HPP
 #define TETRIS_BOARD_HPP
 
-#include <inc/SelfObject.hpp>
-#include <inc/tetris.h>
+#include <SelfObject.hpp>
+#include <tetris.h>
 
 namespace ttrs {
 

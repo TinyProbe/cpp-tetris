@@ -1,8 +1,8 @@
 #ifndef TETRIS_QUEUE_HPP
 #define TETRIS_QUEUE_HPP
 
-#include <inc/SelfObject.hpp>
-#include <inc/tetris.h>
+#include <SelfObject.hpp>
+#include <tetris.h>
 
 #include <list>
 

@@ -1,4 +1,4 @@
-#include <inc/Selector.hpp>
+#include <Selector.hpp>
 
 namespace ttrs {
 

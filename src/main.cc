@@ -1,3 +1,3 @@
-#include <inc/Program.hpp>
+#include <Program.hpp>
 
 int main() { ttrs::Program().run(); }

@@ -1,8 +1,8 @@
-#include <inc/Program.hpp>
-#include <inc/Menu.hpp>
-#include <inc/Game.hpp>
-#include <inc/Option.hpp>
-#include <inc/Pause.hpp>
+#include <Program.hpp>
+#include <Menu.hpp>
+#include <Game.hpp>
+#include <Option.hpp>
+#include <Pause.hpp>
 
 #include <windows.h>
 #include <iostream>

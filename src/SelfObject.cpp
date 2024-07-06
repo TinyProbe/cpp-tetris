@@ -1,4 +1,4 @@
-#include <inc/SelfObject.hpp>
+#include <SelfObject.hpp>
 
 #include <iostream>
 

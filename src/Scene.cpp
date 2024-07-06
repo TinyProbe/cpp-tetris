@@ -1,7 +1,7 @@
-#include <inc/Scene.hpp>
-#include <inc/Selector.hpp>
-#include <inc/Setting.hpp>
-#include <inc/Screen.hpp>
+#include <Scene.hpp>
+#include <Selector.hpp>
+#include <Setting.hpp>
+#include <Screen.hpp>
 
 namespace ttrs {
 

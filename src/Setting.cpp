@@ -1,5 +1,5 @@
-#include <inc/Setting.hpp>
-#include <inc/Selector.hpp>
+#include <Setting.hpp>
+#include <Selector.hpp>
 
 namespace ttrs {
 

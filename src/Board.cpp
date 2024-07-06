@@ -1,7 +1,7 @@
-#include <inc/Board.hpp>
-#include <inc/Holder.hpp>
-#include <inc/Queue.hpp>
-#include <inc/Block.hpp>
+#include <Board.hpp>
+#include <Holder.hpp>
+#include <Queue.hpp>
+#include <Block.hpp>
 
 namespace ttrs {
 
@@ -41,7 +41,7 @@ void Board::next_block() {
     int wid = (int)block_->get_texture().back().size();
     block_->set_x((int)g_kGame_board_x +
                   (int)g_kGame_board_wid - (wid / 2 + wid % 2) * 2);
-    block_->set_y((int)g_kGame_board_y);
+    block_->set_y((int)g_kGame_board_y - 1);
     block_->time_reset();
     block_->link_game_option(game_option_);
   }
@@ -205,6 +205,9 @@ void Board::cleaning() {
     if (!is_line_full(texture_[r])) {
       texture_[l--] = texture_[r];
     }
+  }
+  while (l >= 0) {
+    texture_[l--] = texture_[r];
   }
 }
 

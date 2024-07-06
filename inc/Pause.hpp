@@ -1,8 +1,8 @@
 #ifndef TETRIS_PAUSE_HPP
 #define TETRIS_PAUSE_HPP
 
-#include <inc/Scene.hpp>
-#include <inc/tetris.h>
+#include <Scene.hpp>
+#include <tetris.h>
 
 namespace ttrs {
 

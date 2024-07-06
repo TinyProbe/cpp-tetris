@@ -1,8 +1,8 @@
-#include <inc/Game.hpp>
-#include <inc/Holder.hpp>
-#include <inc/Board.hpp>
-#include <inc/Queue.hpp>
-#include <inc/Block.hpp>
+#include <Game.hpp>
+#include <Holder.hpp>
+#include <Board.hpp>
+#include <Queue.hpp>
+#include <Block.hpp>
 
 #include <conio.h>
 

@@ -1,8 +1,8 @@
 #ifndef TETRIS_BUTTON_HPP
 #define TETRIS_BUTTON_HPP
 
-#include <inc/Object.hpp>
-#include <inc/tetris.h>
+#include <Object.hpp>
+#include <tetris.h>
 
 namespace ttrs {
 

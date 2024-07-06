@@ -1,7 +1,7 @@
 #ifndef TETRIS_SCREEN_HPP
 #define TETRIS_SCREEN_HPP
 
-#include <inc/tetris.h>
+#include <tetris.h>
 
 namespace ttrs {
 

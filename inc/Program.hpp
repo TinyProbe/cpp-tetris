@@ -1,8 +1,8 @@
 #ifndef TETRIS_PROGRAM_HPP
 #define TETRIS_PROGRAM_HPP
 
-#include <inc/Screen.hpp>
-#include <inc/tetris.h>
+#include <Screen.hpp>
+#include <tetris.h>
 
 namespace ttrs {
 
