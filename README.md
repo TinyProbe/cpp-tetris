@@ -2,7 +2,7 @@
 
 ![Image](./res/git/screenshot1.png)
 
-Tetris created using C++.
+Tetris written in C++.
 
 ### And you can change optimization flag as you wish.
 ```Makefile
